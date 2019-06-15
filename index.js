@@ -5,13 +5,14 @@ const server = restify.createServer({
     version: '1.0.0'
 });
 
+//Teste!!!
 var knex = require('knex')({
     client: 'mysql',
     connection: {
-        host: '127.0.0.1',
-        user: 'root',
-        password: '',
-        database: 'restserver'
+        host: 'u0zbt18wwjva9e0v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+        user: 'z9cktik1p3l98ftg',
+        password: 'y01cmja132fth2b1',
+        database: 'khuqwwy3v5bhoqqo'
     }
 });
 
@@ -26,42 +27,28 @@ server.listen(8080, function () {
 });
 
 //rotas
-
-server.get('/', (req, res, next) => {
-    knex('rest').then((dados) => {
-        res.send(dados);
-    }, next)
-});
-
-server.post('/create', (req, res, next) => {
-    knex('rest').insert(req.body).then((dados) => {
-        res.send(dados);
-    }, next)
-});
-
-server.get('/show/:id', (req, res, next) => {
+server.get('/positions/:id', (req, res, next) => {
     const { id } = req.params;
 
-    knex('rest').where('id', id).first().then((dados) => {
+    knex('jobs').where('id', id).first().then((dados) => {
         if (!dados) return res.send(new errs.BadRequestError('Nenhum registro encontrado'));
         res.send(dados);
     }, next)
 });
 
-server.put('/update/:id', (req, res, next) => {
-    const { id } = req.params;
+server.get('/positions', function (req, res) {
+    var { description, full_time, location } = req.query;
 
-    knex('rest').where('id', id).update(req.body).then((dados) => {
-        if (!dados) return res.send(new errs.BadRequestError('Nenhum registro encontrado'));
-        res.send(dados);
-    }, next)
-});
+    description = (description == null || description == '' ? '%' : '%' + description + "%");
+    location = (location == null ? '' : location);
+    full_time = (full_time == null || full_time == '' ? '-1' : (full_time == 'true' ? true : false));
 
-server.del('/delete/:id', (req, res, next) => {
-    const { id } = req.params;
+    knex('jobs').whereRaw("description like ?" +
+        "and case ? when '-1' then true else full_time = ? end" +
+        " and case ? when '' then true else location = ? end",
+        [description, full_time, full_time, location, location]).then(function (dados) {
+            if (!dados) return res.send(new errs.BadRequestError('Nenhum registro encontrado'));
 
-    knex('rest').where('id', id).delete().then((dados) => {
-        if (!dados) return res.send(new errs.BadRequestError('Nenhum registro encontrado'));
-        res.send("Excluido com sucesso");
-    }, next)
+            res.send(dados);
+        })
 });
