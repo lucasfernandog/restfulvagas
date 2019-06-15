@@ -1,0 +1,57 @@
+-- MySQL dump 10.13  Distrib 5.5.62, for Win64 (AMD64)
+--
+-- Host: u0zbt18wwjva9e0v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com    Database: khuqwwy3v5bhoqqo
+-- ------------------------------------------------------
+-- Server version	5.7.23-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `jobs`
+--
+
+DROP TABLE IF EXISTS `jobs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `jobs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` text,
+  `full_time` tinyint(1) DEFAULT NULL,
+  `location` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `jobs`
+--
+
+LOCK TABLES `jobs` WRITE;
+/*!40000 ALTER TABLE `jobs` DISABLE KEYS */;
+INSERT INTO `jobs` VALUES (1,'programar em python, java, node js, e tocar de roda',1,'RV'),(2,'gerenciar projetos, saber dialogar, entender de node js, javascript e saber trabalhar com heroku',0,'GO'),(3,'atender suporte, saber se comunicar, entender de aplicativos gerenciais',1,'GO'),(4,'<p>We are looking for a passionate developer to join our team in Recife. You will be a part of our game engine Developer Relation team with the mission to help game teams work efficiently with the engine. You will be working in a dynamic environment with active problem solving through collaboration with various teams.</p>\n<p><strong>Your role within our Kingdom</strong></p>\n<p>As part of the developer relations team, you will be a critical part of educating our game teams about our internal C++ engine. You will provide hands-on support to get the best out of the game engine in a new game production, whether it’s troubleshooting, profiling or education on existing features. In order to do this, a big part of your time will be spent creating tech demos, documentation, tutorials and extensions that help our users get started and learn all our best practices.</p>\n<p>This help can be provided through remote support, production of training material or on-site.</p>\n<p>You will among other things:</p>\n<ul>\n<li>Be available to provide support for game teams, both in person and remotely. Teams are located at all our engineering offices.</li>\n<li>Help game teams to keep up to date with the latest engine features</li>\n<li>Provide engine team \"from the field\" feedback and feature recommendations</li>\n<li>Create training/documentation material around game engine and tools.</li>\n</ul>\n<p>Skills to create thrills</p>\n<ul>\n<li>Collaborative person that communicates well with internal customers</li>\n<li>Excellent programming skills in C++</li>\n<li>Passionate about supporting game teams</li>\n<li>Experience working in game development with commercial engines</li>\n<li>Experience creating and maintaining technical documentation</li>\n<li>Available to travel when necessary</li>\n</ul>\n<p>Bonus points</p>\n<ul>\n<li>Experience in a similar advocate/developer relation/support role</li>\n<li>Experience working with game engines</li>\n<li>Knowledge of Java or Objective C</li>\n<li>Experience working with Python and Bash scripting</li>\n</ul>\n<p><strong>A great saga needs all sorts of heroes</strong></p>\n<p>Making games is fun! Especially when you do it with people who share the same idea of what makes a good workplace, great. We design games for everyone, no matter where they are or who they are, and we employ all sorts of people from all kinds of backgrounds to bring them to life. Truth is, we simply can’t expect diversity in our players and originality in our games without first nurturing it in our people. A great saga needs all sorts of heroes. And that’s it.</p>\n<p><strong>We’re Seriously Playful</strong></p>\n<p>Officially, we’re a leading interactive entertainment company for the mobile world. Unofficially, we’re a serious business that’s not afraid to have fun. Every day at King, we mix intuition with logic, art with science and magic with mathematics to create the games the world loves to play. Together with our parent company Activision Blizzard, our mission is to bring moments of magic to everyday life. If you think this is something you can help us achieve, let’s talk.</p>\n',0,'PE'),(5,'<p>We are looking for a talented and creative Data Scientist Technical Lead who is interested in pushing the boundaries of online games analytics, with a proven ability to apply your skills, be it technical, behavioural or economic, practically in order to generate business value.</p>\r\n<p><strong>Your role within our Kingdom</strong></p>\r\n<p>The Belo Horizonte Business Performance Unit is part of King Belo Horizonte Studio, home to our live games - Farm Heroes Saga and Farm Heroes Super Saga as well as our new games in production, supporting King’s network of hundreds of millions of players. We are focused on building games that our players love. Reporting to the Business Performance Director of the Belo Horizonte Business Performance Unit, you will lead a team of 4-6 Data Scientists of various tenure and Data Science Team Leads. You will be part of a community of 80+ business intelligence &amp; analytics experts across King.</p>\r\n<p>What you’ll do:</p>\r\n<ul>\r\n<li>Analyse our games per business needs</li>\r\n<li>Continuously develop your team’s skillset through the Data Science Team Lead, trainings, coaching, peer reviews and other means as you see fit</li>\r\n<li>Proactively develop and define new analyses, experiments, data-driven tools, methodologies and best practices to advance data science methods within the team in order to better understand our players’ behaviour and the performance of our games</li>\r\n<li>Lead recruitment and onboarding of Data Scientists</li>\r\n<li>Identify and oversee or handle data and technical issues and projects</li>\r\n<li>Keeping up to date with industry and DS best practices, methodologies and evangelising with the team as relevant</li>\r\n<li>Identify analysis that should be prioritised and work with stakeholders to prioritise it</li>\r\n<li>Be part of King DS leadership forum, evangelise the team and connect the team to the wider DS community in King</li>\r\n<li>Define the tech strategy including automation, tools preference, coding best practices, reusability and transferability</li>\r\n<li>Support other Belo Horizonte BPU team members from technical and methodology perspective\r\nSkills to create thrills</li>\r\n</ul>\r\n<p>You have a passion for quantitative analysis and will have the ability to draw business insights which will add real value to King. You will need to demonstrate the ability to learn quickly and will have worked in a fast paced and collaborative environment. This role will involve working with teams and individuals within the studio and across King - such as Game Developers, Designers and Business Performance Managers, so excellent communication skills are essential.</p>\r\n<p>Our ideal candidate will have solid experience leading an analytical team in a commercial environment.</p>\r\n<p>Business Insight: The ability to understand the problems and opportunities from a player and a business perspective, and then defining the right data, analysis or interpretation to lead to the right recommendations and decisions</p>\r\n<p>Leadership: The ability to mentor, guide and inspire Data Scientists and drive best practices</p>\r\n<p>SQL: The ability to write complex SQL queries to analyse our databases with 300+ million players, and work effectively with big data technologies, e.g. BigQuery, Hadoop etc..</p>\r\n<p>Analytical coding: Using tools such as R, Python (and also Excel) for analytical purposes</p>\r\n<p>Stats: Understanding the appropriate statistical or machine learning techniques to use in different circumstances.</p>\r\n<p>Communication: Designing good ways of communicating, visualising or reporting your results/analysis so they are clear and unambiguous</p>\r\n<p><strong>Bonus points</strong></p>\r\n<p>Specific experience that might be helpful, but is not required, includes: experience in the games industry or similarly sophisticated customer-facing digital businesses; experience in behavioural psychology/economics; robust understanding of more advanced statistical techniques suitable for analysis of highly skewed populations; experience in predictive analytics, segmentation, and related areas; experience in experimental design; software engineering skills in Java and other languages (beyond R and Python which we use most frequently); skills with standard reporting tools such as QlikView/Tableau/etc.</p>\r\n<p><strong>A great saga needs all sorts of heroes</strong></p>\r\n<p>Making games is fun. Especially when you do it with people who share the same idea of what makes a good workplace, great. We design games for everyone, no matter where they are or who they are, and we employ all sorts of people from all kinds of backgrounds to bring them to life. Truth is, we simply can’t expect diversity in our players and originality in our games without first nurturing it in our people. A great saga needs all sorts of heroes. And that’s it.</p>\r\n<p><strong>King in Belo Horizonte</strong></p>\r\n<p>Based in bustling Soho, the cultural heart of the West End, our Belo Horizonte studio occupies all four floors of the landmark Ampersand building. Regent’s Park is close enough for a lunchtime run, as are the delights of Covent Garden and the shopping mecca Oxford Street. Non-Brits will soon discover it’s no urban myth; there really is a pub on every corner.</p>\r\n',1,'MG'),(6,'O nosso QG em Belo Horizonte, busca reunir os devs mais capacidados to mercado. Exigimos conhecimento de flutter, android studio, git e kotlin',0,'MG'),(7,'Nossa base na capital de Goiás, Goiânia, tenta recrutar as duplas sertanejas mais maneiras do estado. Mas não é só saber cantar, viu? tem que manjar de java, banco de dados e ter conhecimento da Intelli J IDEA',0,'GO'),(8,'Somos uma empresa de automação no interior de SP, mais precisamente em Catanduva. Buscamos pessoas capacitadas, para trabalhar no nosso suporte.',0,'SP'),(9,'A google sempre busca os melhores. Pra SP, capital, estamos buscando especialistas em desing thinking',1,'SP');
+/*!40000 ALTER TABLE `jobs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'khuqwwy3v5bhoqqo'
+--
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-06-15 13:49:33
