@@ -22,7 +22,8 @@ server.use(restify.plugins.acceptParser(server.acceptable));
 server.use(restify.plugins.queryParser());
 server.use(restify.plugins.bodyParser());
 
-server.listen(8080, function () {
+var port = env.process.PORT || 8080;
+server.listen(port, function () {
     console.log('%s listening at %s', server.name, server.url);
 });
 
