@@ -39,6 +39,7 @@ server.get('/positions/:id', (req, res, next) => {
 server.get('/positions', function (req, res) {
     var { description, full_time, location } = req.query;
 
+    //Tratado para que se o usuário não preencha os parametros, /positions retorne todas a informações do banco
     description = (description == null || description == '' ? '%' : '%' + description + "%");
     location = (location == null ? '' : location);
     full_time = (full_time == null || full_time == '' ? '-1' : (full_time == 'true' ? true : false));
